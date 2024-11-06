@@ -1,11 +1,13 @@
-# utterances-oauth
+# appsinprogress-oauth
 
-This repo contains the source for the [Cloudflare Worker](https://developers.cloudflare.com/workers/) that powers the GitHub OAuth flow and issue creation for Utterances.
+This repo contains the source for the [Cloudflare Worker](https://developers.cloudflare.com/workers/) that powers the GitHub OAuth flow and issue creation for AppsInProgress' [Penmark CMS](https://github.com/appsinprogress/penmark).
+
+It's a fork of [utteranc.es](https://github.com/utterance/utterances-oauth).
 
 ## install
 
 ```
-yarn install
+npm install
 ```
 
 ## configuration
@@ -31,13 +33,13 @@ ORIGINS=https://utteranc.es,http://localhost:9000
 ## run locally
 
 ```
-yarn run start
+npm run start
 ```
 
 ## build
 
 ```
-yarn run build
+npm run build
 ```
 
 ## deploy
@@ -47,5 +49,5 @@ First add the necessary CLOUDFLARE\_\* entries to your .env file. See [@cfworker
 Then execute:
 
 ```
-yarn run deploy
+npm run deploy
 ```
