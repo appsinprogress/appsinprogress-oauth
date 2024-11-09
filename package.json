@@ -1,20 +1,15 @@
 {
-  "name": "utterances-oauth",
-  "version": "0.1.0",
-  "description": "GitHub OAuth server for utterances",
-  "main": "dist/index.js",
+  "name": "appsinprogress-oauth",
   "scripts": {
-    "start": "cfworker run --watch --inspect src/index.ts",
-    "build": "cfworker build src/index.ts",
-    "deploy": "cfworker deploy --name utteranc-es --route 'api.utteranc.es/*' src/index.ts"
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy --minify"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/utterance/utterances-oauth"
+  "dependencies": {
+    "@elithrar/workers-hono-rate-limit": "^0.4.3",
+    "hono": "^4.6.9"
   },
-  "license": "MIT",
   "devDependencies": {
-    "@cfworker/dev": "^1.6.11",
-    "typescript": "^4.2.4"
+    "@cloudflare/workers-types": "^4.20241022.0",
+    "wrangler": "^3.83.0"
   }
 }
